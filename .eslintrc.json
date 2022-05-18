@@ -14,7 +14,7 @@
     "sourceType": "module"
   },
   "rules": {
-    /* "no-console": "error", */
+    "no-console": "error"
   },
   "overrides": [
     {

@@ -1,5 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`rich text solid renderer does not render unrecognized marks 1`] = `
+<body>
+  <div>
+    <p>
+      Hello world!
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders asset hyperlink 1`] = `
+<body>
+  <div>
+    <p>
+      
+      <span>
+        type: 
+        asset-hyperlink
+        <!---->
+         id: 
+        9mpxT4zsRi6Iwukey8KeM
+      </span>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders blockquotes 1`] = `
+<body>
+  <div>
+    <p>
+      hello
+    </p>
+    <blockquote>
+      world
+    </blockquote>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders default entry line block 1`] = `
+<body>
+  <div>
+    <div />
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders embedded entry 1`] = `
+<body>
+  <div>
+    <p>
+      
+      <span>
+        type: 
+        embedded-entry-inline
+        <!---->
+         id: 
+        9mpxT4zsRi6Iwukey8KeM
+      </span>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders empty node if type is not recognized 1`] = `
+<body>
+  <div>
+    Hello world!
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders entry hyperlink 1`] = `
+<body>
+  <div>
+    <p>
+      
+      <span>
+        type: 
+        entry-hyperlink
+        <!---->
+         id: 
+        9mpxT4zsRi6Iwukey8KeM
+      </span>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders horizontal rule 1`] = `
+<body>
+  <div>
+    <p>
+      hello world
+    </p>
+    <hr />
+    <p>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders hyperlink 1`] = `
+<body>
+  <div>
+    <p>
+      Some text 
+      <a
+        href="https://url.org"
+      >
+        link
+      </a>
+       text.
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders marks with the passed custom mark renderer 1`] = `
+<body>
+  <div>
+    <p>
+      <i>
+        <strong
+          id="custom-props"
+        >
+          hello world
+        </strong>
+      </i>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders multiple marks with default mark renderer 1`] = `
+<body>
+  <div>
+    <p>
+      <i>
+        <b>
+          hello world
+        </b>
+      </i>
+    </p>
+  </div>
+</body>
+`;
+
 exports[`rich text solid renderer renders node with default node renderers 1`] = `
 <body>
   <div>
@@ -49,6 +202,183 @@ exports[`rich text solid renderer renders nodes with default mark renderer 2`] =
       <b>
         hello world
       </b>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders nodes with default mark renderer 3`] = `
+<body>
+  <div>
+    <p>
+      <u>
+        hello world
+      </u>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders nodes with default mark renderer 4`] = `
+<body>
+  <div>
+    <p>
+      <code>
+        hello world
+      </code>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders nodes with passed custom node renderer 1`] = `
+<body>
+  <div>
+    <div
+      id="custom-doc"
+    >
+      <p
+        id="custom-para"
+      >
+        hello
+      </p>
+      <blockquote>
+        world
+      </blockquote>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders ordered list 1`] = `
+<body>
+  <div>
+    <ol>
+      <li>
+        <p>
+          Hello
+        </p>
+      </li>
+      <li>
+        <p>
+          world
+        </p>
+      </li>
+    </ol>
+    <p>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders tables 1`] = `
+<body>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <p>
+              A 1
+            </p>
+          </td>
+          <td>
+            <p>
+              B 1
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              A 2
+            </p>
+          </td>
+          <td>
+            <p>
+              B 2
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders tables with header 1`] = `
+<body>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <p>
+              A 1
+            </p>
+          </th>
+          <th>
+            <p>
+              B 1
+            </p>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              A 2
+            </p>
+          </td>
+          <td>
+            <p>
+              B 2
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders text with the passed custom text renderer 1`] = `
+<body>
+  <div>
+    <p>
+      hello Earth
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders unaltered text with default text renderer 1`] = `
+<body>
+  <div>
+    <p>
+      hello world
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders unordered list 1`] = `
+<body>
+  <div>
+    <ul>
+      <li>
+        <p>
+          Hello
+        </p>
+      </li>
+      <li>
+        <p>
+          world
+        </p>
+      </li>
+    </ul>
+    <p>
+      
     </p>
   </div>
 </body>

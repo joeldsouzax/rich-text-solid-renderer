@@ -2,7 +2,7 @@
  * @ Author: Joel D'Souza
  * @ Create Time: 2022-05-17 22:15:07
  * @ Modified by: Joel D'Souza
- * @ Modified time: 2022-05-18 22:24:57
+ * @ Modified time: 2022-05-18 23:38:17
  * @ Description:a clone of https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
  *  but for solid-js
  * @format
@@ -181,7 +181,7 @@ export const NodeToSolidComponent: Component<NodeToSolidComponent> = (
           O.chain(
             flow(
               O.fromNullable,
-              O.map((r) => r[m.type])
+              O.map((r) => r[m.type] ?? DefaultMark)
             )
           ),
           O.getOrElse(() => DefaultMark)
@@ -196,7 +196,9 @@ export const NodeToSolidComponent: Component<NodeToSolidComponent> = (
         O.chain(
           flow(
             O.fromNullable,
-            O.map((r) => r[(props.node as unknown as Text).value])
+            O.map((r) => {
+              return r((props.node as unknown as Text).value);
+            })
           )
         ),
         O.getOrElse(() => (props.node as unknown as Text).value)
@@ -219,7 +221,9 @@ export const NodeToSolidComponent: Component<NodeToSolidComponent> = (
     O.chain(
       flow(
         O.fromNullable,
-        O.map((r) => r[props.node.nodeType])
+        O.map((r) => {
+          return r[props.node.nodeType] ?? DefaultNode;
+        })
       )
     ),
     O.getOrElse(() => DefaultNode)
