@@ -9,9 +9,8 @@
     "sourceMap": true,
     "allowJs": true,
     "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    "jsxImportSource": "solid-js/h",
     "moduleResolution": "node",
-    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -21,7 +20,8 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "removeComments": true
+    "removeComments": true,
+    "types": ["jest", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "jest"]
+  "exclude": ["node_modules", "coverage"]
 }

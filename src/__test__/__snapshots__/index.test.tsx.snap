@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rich text solid renderer renders node with default node renderers 1`] = `
+<body>
+  <div>
+    <p>
+      hello world
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders node with default node renderers 2`] = `
+<body>
+  <div>
+    <h1>
+      hello world
+    </h1>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders node with default node renderers 3`] = `
+<body>
+  <div>
+    <h2>
+      hello world
+    </h2>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders nodes with default mark renderer 1`] = `
+<body>
+  <div>
+    <p>
+      <i>
+        hello world
+      </i>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer renders nodes with default mark renderer 2`] = `
+<body>
+  <div>
+    <p>
+      <b>
+        hello world
+      </b>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer returns an tree of elements when given a populated document 1`] = `
+<body>
+  <div>
+    <p>
+      hello world
+    </p>
+    <hr />
+    <p>
+      
+    </p>
+  </div>
+</body>
+`;
+
+exports[`rich text solid renderer should give an empty div element when given an empty document 1`] = `
+<body>
+  <div />
+</body>
+`;
