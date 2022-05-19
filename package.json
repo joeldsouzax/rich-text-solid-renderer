@@ -73,5 +73,11 @@
     "test": "jest",
     "build": "rollup -c",
     "prepare": "husky install"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
   }
 }
