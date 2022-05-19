@@ -1,6 +1,6 @@
 {
   "name": "rich-text-solid-renderer",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "contentful rich text renderer for solid js",
   "author": "Joel D'Souza <joeldsouzax@gmail.com>",
   "license": "MIT",
@@ -55,6 +55,7 @@
     "prettier": "^2.6.2",
     "rollup": "^2.73.0",
     "rollup-preset-solid": "^1.4.0",
+    "semantic-release": "^19.0.2",
     "solid-jest": "^0.2.0",
     "solid-js": "^1.4.1",
     "solid-testing-library": "^0.3.0",
