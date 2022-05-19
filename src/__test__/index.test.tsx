@@ -19,7 +19,11 @@ import {
   hyperlinkDoc,
   inlineEntityDoc,
 } from './documents';
-import SolidRichText, { Options } from '../index';
+import SolidRichText, {
+  CommonNode,
+  NodeToSolidComponent,
+  Options,
+} from '../index';
 import multiMark from './documents/multi-mark';
 
 describe('rich text solid renderer', () => {
@@ -307,6 +311,122 @@ describe('rich text solid renderer', () => {
 
     const tree = render(() => (
       <SolidRichText document={document} />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('Node To solid Component', () => {
+  const options: Options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (props) => <p>{props.children}</p>,
+    },
+    renderMark: {
+      [MARKS.BOLD]: (props) => <b>{props.children}</b>,
+    },
+  };
+
+  const createBlockNode = (nodeType: BLOCKS): CommonNode => ({
+    nodeType,
+    data: {},
+    content: [
+      {
+        nodeType: 'text',
+        value: 'hello world',
+        marks: [],
+        data: {},
+      },
+    ],
+  });
+
+  const createTextNode = (type: string): CommonNode => ({
+    nodeType: 'text',
+    value: 'hello world',
+    marks: [{ type }],
+    data: {},
+  });
+
+  afterEach(cleanup);
+
+  it('renders valid nodes', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent
+        node={createBlockNode(BLOCKS.PARAGRAPH)}
+        options={options}
+      />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders invalid node types in React fragments', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent
+        node={createBlockNode(BLOCKS.HEADING_1)}
+        options={options}
+      />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders valid marks', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent
+        node={createTextNode(MARKS.BOLD)}
+        options={options}
+      />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('does not add additional tags on invalid marks', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent
+        node={createTextNode(MARKS.ITALIC)}
+        options={options}
+      />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  const customTextNode: CommonNode = {
+    nodeType: BLOCKS.PARAGRAPH,
+    data: {},
+    content: [
+      {
+        nodeType: 'text',
+        value: 'some\nlines\nof\ntext',
+        marks: [{ type: MARKS.BOLD }],
+        data: {},
+      },
+    ],
+  };
+
+  it('does not render altered text with default text renderer', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent node={customTextNode} options={options} />
+    )).baseElement;
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders altered text with custom renderer', () => {
+    const tree = render(() => (
+      <NodeToSolidComponent
+        node={customTextNode}
+        options={{
+          ...options,
+          renderText: (props) => {
+            return props.split('\n').reduce((children, textSegment, index) => {
+              return [...children, index > 0 && <br />, textSegment];
+            }, []);
+          },
+        }}
+      />
     )).baseElement;
 
     expect(tree).toMatchSnapshot();

@@ -1,5 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Node To solid Component does not add additional tags on invalid marks 1`] = `
+<body>
+  <div>
+    hello world
+  </div>
+</body>
+`;
+
+exports[`Node To solid Component does not render altered text with default text renderer 1`] = `
+<body>
+  <div>
+    <p>
+      <b>
+        some
+lines
+of
+text
+      </b>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`Node To solid Component renders altered text with custom renderer 1`] = `
+<body>
+  <div>
+    <p>
+      <b>
+        some
+        <br />
+        lines
+        <br />
+        of
+        <br />
+        text
+      </b>
+    </p>
+  </div>
+</body>
+`;
+
+exports[`Node To solid Component renders invalid node types in React fragments 1`] = `
+<body>
+  <div>
+    hello world
+  </div>
+</body>
+`;
+
+exports[`Node To solid Component renders valid marks 1`] = `
+<body>
+  <div>
+    <b>
+      hello world
+    </b>
+  </div>
+</body>
+`;
+
+exports[`Node To solid Component renders valid nodes 1`] = `
+<body>
+  <div>
+    <p>
+      hello world
+    </p>
+  </div>
+</body>
+`;
+
 exports[`rich text solid renderer does not render unrecognized marks 1`] = `
 <body>
   <div>
