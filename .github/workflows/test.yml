@@ -1,0 +1,16 @@
+# Test workflow
+
+name: Test
+
+on: push
+
+jobs:
+  lint:
+    name: Run tests
+    runs-on: ubuntu-latest
+    container: 'node:18-alpine'
+    steps:
+    - uses: actions/checkout@v3
+    - run: yarn
+    - run: yarn build --if-present
+    - run: yarn test
