@@ -63,7 +63,7 @@
     "typescript": "^4.6.4"
   },
   "peerDependencies": {
-    "solid-js": "^1.4.1"
+    "solid-js": "^1.4.0"
   },
   "dependencies": {
     "@contentful/rich-text-types": "^15.12.1"
