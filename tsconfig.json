@@ -7,7 +7,7 @@
     "target": "es2017",
     "lib": ["es6", "dom", "esnext.asynciterable", "es2017"],
     "sourceMap": true,
-    "allowJs": true,
+    "allowJs": false,
     "jsx": "preserve",
     "jsxImportSource": "solid-js/h",
     "moduleResolution": "node",
@@ -21,7 +21,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
-    "types": ["jest", "@testing-library/jest-dom"]
+    "types": ["jest", "@testing-library/jest-dom", "node"]
   },
   "exclude": ["node_modules", "coverage"]
 }
