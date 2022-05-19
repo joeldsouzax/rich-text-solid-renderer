@@ -54,6 +54,8 @@
     "jest-environment-jsdom": "^27.5.1",
     "prettier": "^2.6.2",
     "rollup": "^2.73.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-preset-solid": "^1.4.0",
     "semantic-release": "^19.0.2",
     "solid-jest": "^0.2.0",
