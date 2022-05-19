@@ -1,10 +1,15 @@
 {
   "root": true,
   "env": {
-    "browser": true,
-    "node": true
+    "browser": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:solid/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["solid", "@typescript-eslint", "jest-dom"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,15 +20,5 @@
   },
   "rules": {
     "no-console": "error"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "plugins": ["solid", "@typescript-eslint", "jest-dom"],
-      "extends": [
-        "plugin:solid/recommended",
-        "plugin:@typescript-eslint/recommended"
-      ]
-    }
-  ]
+  }
 }
