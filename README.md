@@ -1,4 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Strict TypeScript Checked](https://badgen.net/badge/TS/Strict "Strict TypeScript Checked")](https://www.typescriptlang.org)
+
+[![Release npm package](https://github.com/joeldsouzax/rich-text-solid-renderer/actions/workflows/release.yml/badge.svg)](https://github.com/joeldsouzax/rich-text-solid-renderer/actions/workflows/release.yml) [![Test](https://github.com/joeldsouzax/rich-text-solid-renderer/actions/workflows/test.yml/badge.svg)](https://github.com/joeldsouzax/rich-text-solid-renderer/actions/workflows/test.yml)
+
 # `rich-text-solid-renderer`
 
 Solid-js renderer for contentful rich text.
