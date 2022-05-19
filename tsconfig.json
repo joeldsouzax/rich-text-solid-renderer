@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
+    "outDir": "./dist",
     "jsxImportSource": "solid-js",
     "types": ["jest", "@testing-library/jest-dom", "node"]
   },
