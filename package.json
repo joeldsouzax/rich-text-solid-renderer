@@ -2,10 +2,39 @@
   "name": "rich-text-solid-renderer",
   "version": "1.0.0",
   "description": "contentful rich text renderer for solid js",
-  "main": "index.ts",
   "author": "Joel D'Souza <joeldsouzax@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "source": "src/index.tsx",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "solid-components",
+    "rich-text",
+    "contentful",
+    "renderer",
+    "component",
+    "solid-js",
+    "solid-renderer",
+    "typescript",
+    "jest",
+    "eslint",
+    "snapshots",
+    "rich-text-jsx",
+    "rollup"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/source/index.jsx",
+      "import": "./dist/esm/index.js",
+      "browser": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "node": "./dist/cjs/index.js"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
@@ -39,6 +68,7 @@
   },
   "scripts": {
     "test": "jest",
+    "build": "rollup -c",
     "prepare": "husky install"
   }
 }
