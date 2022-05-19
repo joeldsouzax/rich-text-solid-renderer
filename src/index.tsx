@@ -2,7 +2,7 @@
  * @ Author: Joel D'Souza
  * @ Create Time: 2022-05-17 22:15:07
  * @ Modified by: Joel D'Souza
- * @ Modified time: 2022-05-19 12:34:26
+ * @ Modified time: 2022-05-19 20:09:32
  * @ Description:a clone of https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
  *  but for solid-js
  * @format
