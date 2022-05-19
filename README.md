@@ -11,13 +11,13 @@ Solid-js renderer for contentful rich text.
 Using [npm](http://npmjs.org/):
 
 ```sh
-npm install @joeldsouzax/rich-text-solid-renderer
+npm install rich-text-solid-renderer
 ```
 
 Using [yarn](https://yarnpkg.com/):
 
 ```sh
-yarn add @joeldsouzax/rich-text-solid-renderer
+yarn add rich-text-solid-renderer
 ```
 
 ## Usage
