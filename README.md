@@ -24,7 +24,7 @@ yarn add rich-text-solid-renderer
 
 ```typescript
 import {ParentComponent} from 'solid-js';
-import SolidRichText from '@joeldsouzax/rich-text-solid-renderer';
+import SolidRichText from 'rich-text-solid-renderer';
 
 const document = {
   nodeType: 'document',
@@ -52,7 +52,7 @@ const Parent: ParentComponent = (props) => {
 
 ```typescript
 import {ParentComponent} from 'solid-js';
-import SolidRichText from '@joeldsouzax/rich-text-solid-renderer';
+import SolidRichText from 'rich-text-solid-renderer';
 
 const document = {
   nodeType: 'document',
@@ -87,7 +87,7 @@ You can also pass custom renderers for both marks and nodes as an optional param
 ```javascript
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import {ParentComponent} from 'solid-js';
-import SolidRichText, { NodeRendererProps } from '@joeldsouzax/rich-text-solid-renderer';
+import SolidRichText, { NodeRendererProps } from 'rich-text-solid-renderer';
 
 
 const document = {
@@ -135,7 +135,7 @@ Last, but not least, you can pass a custom rendering component for an embedded e
 
 ```typescript
 import { BLOCKS } from '@contentful/rich-text-types';
-import SolidRichText from '@joeldsouzax/rich-text-solid-renderer';
+import SolidRichText from 'rich-text-solid-renderer';
 
 const document = {
   nodeType: 'document',
