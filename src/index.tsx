@@ -2,7 +2,7 @@
  * @ Author: Joel D'Souza
  * @ Create Time: 2022-05-17 22:15:07
  * @ Modified by: Joel D'Souza
- * @ Modified time: 2022-05-19 23:45:22
+ * @ Modified time: 2022-05-20 14:30:30
  * @ Description:a clone of https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
  *  but for solid-js
  * @format
@@ -15,12 +15,18 @@ import {
   VoidComponent,
   For,
 } from 'solid-js';
-import * as contentful from '@contentful/rich-text-types';
-import { Block, Inline, Document, Text } from '@contentful/rich-text-types';
 import * as O from 'fp-ts/Option';
 import { flow, pipe } from 'fp-ts/function';
-
-const { BLOCKS, INLINES, MARKS, helpers } = contentful;
+import {
+  BLOCKS,
+  INLINES,
+  MARKS,
+  Block,
+  Inline,
+  Document,
+  Text,
+  isText,
+} from './type';
 export type CommonNode = Text | Block | Inline;
 export type NodeRendererProps = {
   node: Block | Inline;
@@ -164,7 +170,7 @@ export const NodeToSolidComponent: Component<NodeToSolidComponent> = (
   props
 ) => {
   // for text nodes
-  if (helpers.isText(props.node)) {
+  if (isText(props.node)) {
     return props.node.marks.reduce(
       (v, m) => {
         const Value = pipe(
